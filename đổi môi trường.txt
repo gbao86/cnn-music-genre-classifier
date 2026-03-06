@@ -1,0 +1,20 @@
+.venvrun\Scripts\Activate.ps1
+deactivate
+
+.venv\Scripts\Activate.ps1
+
+xóa file env:
+rm -r .venvrun
+
+tạo môi trường ảo mới:
+python -m venv .venvrun
+py -3.11 -m venv .venvrun
+
+cài lib:
+pip install -r requirements.txt
+
+kiểm tra phiên bản lib:
+pip list | Select-String -Pattern "tensorflow|keras|protobuf|Flask|librosa|numpy|matplotlib|h5py"
+
+test api:
+http://127.0.0.1:5000/predict

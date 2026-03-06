@@ -1,0 +1,205 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #fff;
+    background: #000;
+}
+
+/* === VIDEO NỀN === */
+#bg-video {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    object-fit: cover; z-index: -2; 
+    filter: brightness(0.7) contrast(1.1);
+}
+.overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.3); z-index: -1; pointer-events: none;
+}
+
+/* === GLASSMORPHISM === */
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* === HEADER === */
+.header {
+    text-align: center; margin: 0 auto 30px; max-width: 900px; padding: 30px;
+    position: relative; z-index: 1;
+}
+.header h1 { 
+    font-size: 36px; font-weight: 800; margin: 0; 
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6); letter-spacing: 1px;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+@keyframes glow { 
+    from { filter: drop-shadow(0 0 10px #fff); } 
+    to { filter: drop-shadow(0 0 20px #00dbde); } 
+}
+.header p { 
+    margin: 12px 0 0; font-size: 17px; opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* === CONTAINER === */
+.container { 
+    max-width: 620px; margin: 0 auto 30px; padding: 35px; position: relative; z-index: 1;
+}
+h2.section-title {
+    text-align: center; color: #fff; font-size: 23px; font-weight: 700;
+    border-bottom: 3px solid #00dbde; padding-bottom: 12px; margin: 0 0 25px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* === FORM === */
+form { display: flex; flex-direction: column; gap: 20px; }
+input[type="file"] { 
+    border: 2px dashed rgba(255,255,255,0.5); border-radius: 12px; padding: 30px; 
+    text-align: center; cursor: pointer; background: rgba(255,255,0.2); 
+    transition: all 0.3s; font-size: 17px; color: #fff;
+}
+input[type="file"]:hover { border-color: #00dbde; background: rgba(255,255,255,0.3); }
+input[type="file"]::file-selector-button { 
+    background: #00dbde; color: #000; border: none; padding: 12px 22px; 
+    border-radius: 10px; cursor: pointer; font-weight: bold; margin-right: 12px; font-size: 16px;
+}
+input[type="file"]::file-selector-button:hover { background: #00b89c; }
+
+button { 
+    background: linear-gradient(45deg, #fc00ff, #00dbde); color: white; 
+    border: none; padding: 18px; border-radius: 12px; font-size: 19px; 
+    font-weight: bold; cursor: pointer; transition: 0.3s; 
+}
+button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+button:disabled { background: #555; cursor: not-allowed; }
+
+#loader { 
+    text-align: center; display: none; padding: 25px; color: #fff; font-style: italic; font-size: 16px;
+}
+.spinner {
+    display: inline-block; width: 24px; height: 24px; border: 3px solid #333;
+    border-top: 3px solid #00dbde; border-radius: 50%; animation: spin 1s linear infinite;
+    margin-right: 12px; vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* === KHU VỰC KẾT QUẢ === */
+#results-area {
+    margin-top: 35px;
+    display: grid;
+    gap: 30px;
+}
+.result-card {
+    padding: 25px;
+}
+.result-card h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    margin-bottom: 15px;
+    word-break: break-all; /* Hiển thị tên file dài */
+}
+.result-main-info {
+    text-align: center;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #00dbde;
+    margin-bottom: 20px;
+}
+.result-main-info h2 { font-size: 28px; }
+.result-main-info p { font-size: 18px; margin-top: 8px; }
+
+.image-toggle-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.image-toggle-buttons button {
+    flex: 1;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #00dbde;
+}
+.image-toggle-buttons button.active {
+    background: #00dbde;
+    color: #000;
+}
+.image-container {
+    margin-top: 15px;
+    display: none; /* Ẩn mặc định */
+}
+.image-container img {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* === GIỚI THIỆU === */
+.about-model { line-height: 1.8; font-size: 16px; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.about-model ul { padding-left: 25px; margin: 15px 0; }
+.about-model li { margin-bottom: 12px; }
+.about-model code { background: rgba(0,0,0,0.4); color: #0ff; padding: 4px 8px; border-radius: 6px; font-weight: bold; }
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+    .header h1 { font-size: 28px; }
+    .container { padding: 25px; }
+}
+
+/* (!!! MỚI !!!) CSS CHO DANH SÁCH FILE ĐÃ CHỌN */
+#file-list-display {
+    margin-top: -10px; /* Nằm ngay dưới ô input */
+    margin-bottom: 10px; /* Tạo khoảng cách với nút Phân loại */
+    font-size: 15px;
+    max-height: 200px; /* Giới hạn chiều cao, cho phép cuộn */
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px 15px;
+    /* Ẩn ban đầu */
+    display: none;
+}
+#file-list-display h4 {
+    margin-bottom: 10px;
+    color: #00dbde;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 8px;
+}
+#file-list-display ul {
+    list-style: none;
+    padding-left: 0;
+}
+#file-list-display li {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    word-break: break-all;
+    font-size: 14px;
+}
+#file-list-display .file-limit-warning {
+    color: #ffd700; /* Vàng */
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 5px;
+}

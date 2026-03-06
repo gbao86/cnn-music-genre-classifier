@@ -1,0 +1,13 @@
+# Các thư viện chính từ Kaggle
+tensorflow==2.18.0
+keras==3.8.0
+protobuf==3.20.3
+
+# Các thư viện app.py cần
+Flask==3.1.1
+librosa==0.11.0
+numpy==1.26.4
+matplotlib==3.7.2
+
+# Các thư viện phụ Keras cần
+h5py==3.14.0

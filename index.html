@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PHÂN LOẠI THỂ LOẠI ÂM NHẠC BẰNG PHÂN TÍCH QUANG PHỔ - TRỊNH GIA BẢO">
+    <title>Demo Phân loại Nhạc (Trịnh Gia Bảo)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+</head>
+<body>
+
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <header class="header glass">
+        <h1>PHÂN LOẠI THỂ LOẠI ÂM NHẠC CRNN</h1>
+        <p>Thực hiện bởi: Trịnh Gia Bảo | Email: tiktokthu10@gmail.com</p>
+    </header>
+
+    <div class="container glass">
+        <h2 class="section-title">Chạy Demo</h2>
+        <form id="upload-form">
+            <input type="file" id="file-input" accept=".mp3,audio/mpeg" required multiple>
+            
+            <div id="file-list-display"></div>
+
+            <button type="submit" id="submit-button">Phân loại</button>
+        </form>
+        <div id="loader">
+            <div class="spinner"></div>
+            <span id="loader-text">Đang xử lý âm thanh và phân loại...</span>
+        </div>
+
+        <div id="results-area">
+            </div>
+    </div>
+
+    <div class="container glass about-model">
+        <h2 class="section-title">Về Mô hình (v12)</h2>
+        <p>Mô hình <strong>CRNN (Mạng Tích chập-Hồi quy)</strong> huấn luyện trên <strong>FMA-small</strong> với <strong>2 đầu vào</strong>.</p>
+        <p><strong>Quy trình:</strong></p>
+        <ul>
+            <li><strong>Input 1 (Nhánh Mắt):</strong> Ảnh Mel-spectrogram (128×431) 3 kênh -> <code>EfficientNetB0</code></li>
+            <li><strong>Input 2 (Nhánh Tai):</strong> Chuỗi 57 đặc trưng âm thanh (431x57) -> <code>LSTM</code></li>
+            <li><strong>Fusion:</strong> Hai nhánh được kết hợp bằng cơ chế <code>Attention</code>.</li>
+            <li><strong>Độ chính xác (dự kiến):</strong> ~<strong>80-86%</strong> trên tập test (sau khi sửa lỗi rò rỉ dữ liệu).</li>
+        </ul>
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

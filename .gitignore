@@ -1,0 +1,12 @@
+.venv/
+.venvrun/
+.vscode/
+__pycache__/
+*.exe
+*.keras
+*.mp4
+*.pkl
+*.mp3
+data/
+Mohinh/
+TH Python/
