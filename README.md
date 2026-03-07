@@ -76,4 +76,4 @@ python app.py
 - **Frontend**: HTML5, CSS3, JavaScript
 
 ## Giấy phép (License)
-Dự án này được cấp phép theo các điều khoản của Apache License 2.0. Xem file [LICENSE](.LICENSE) để biết thêm chi tiết.
+Dự án này được cấp phép theo các điều khoản của Apache License 2.0. Xem file [LICENSE](./LICENSE) để biết thêm chi tiết.
