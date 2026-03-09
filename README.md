@@ -20,8 +20,8 @@ Dự án này là một ứng dụng web giúp phân loại các tệp âm thanh
 - Các tệp `.ipynb`: Các Jupyter notebook được sử dụng để huấn luyện và đánh giá mô hình.
 
 ## Notebooks Huấn luyện
-- Bạn có thể tham khảo chi tiết quy trình huấn luyện và xây dựng mô hình tại các liên kết dưới đây:
-Google Colab (Huấn luyện mô hình thực tế): [Tại đây](https://colab.research.google.com/drive/1RQUl36ypYDf0VUVEFgEcBJAKYnHUi-d8?usp=sharing)
+Bạn có thể tham khảo chi tiết quy trình huấn luyện và xây dựng mô hình tại các liên kết dưới đây:
+- Google Colab (Huấn luyện mô hình thực tế): [Tại đây](https://colab.research.google.com/drive/1RQUl36ypYDf0VUVEFgEcBJAKYnHUi-d8?usp=sharing)
 - Kaggle Notebook (Music Genre Classification - FMA Small): [Tại đây](https://www.kaggle.com/code/jisy736386/music-genre-classification-spectrogram-fma-small)
 - Kaggle Notebook (Music Genre Classification - Spectrogram): [Tại đây](https://www.kaggle.com/code/jisy736386/music-genre-classification-spectrogram)
 
