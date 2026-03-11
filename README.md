@@ -2,6 +2,16 @@
 
 Dự án này là một ứng dụng web giúp phân loại các tệp âm thanh thành 8 thể loại âm nhạc khác nhau, sử dụng Mạng nơ-ron tích chập 2 giai đoạn (2-Stage CNN) được xây dựng với TensorFlow/Keras và trích xuất lượng đặc trưng âm thanh thông qua thư viện `librosa`.
 
+---
+
+### 🎥 Video Demo
+
+Bạn có thể xem video giới thiệu tại đây:
+
+👉 [Xem Video Demo trên YouTube](https://youtu.be/uYD2JqV0xZI?si=WJXvkpLL5ICKQ9eT)
+
+---
+
 ## Các chức năng chính
 
 - **Dự đoán thể loại**: Tải lên một tệp âm thanh và nhận kết quả dự đoán thể loại cùng với độ tin cậy cho toàn bộ 8 danh mục.
