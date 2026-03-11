@@ -19,6 +19,12 @@ Dự án này là một ứng dụng web giúp phân loại các tệp âm thanh
 - `scaler_60_features_fixed.pkl`: Bộ Scikit-learn MinMaxScaler dùng để chuẩn hóa các đặc trưng âm thanh đã trích xuất.
 - Các tệp `.ipynb`: Các Jupyter notebook được sử dụng để huấn luyện và đánh giá mô hình.
 
+## Notebooks Huấn luyện
+Bạn có thể tham khảo chi tiết quy trình huấn luyện và xây dựng mô hình tại các liên kết dưới đây:
+- Google Colab (Huấn luyện mô hình thực tế): [Tại đây](https://colab.research.google.com/drive/1RQUl36ypYDf0VUVEFgEcBJAKYnHUi-d8?usp=sharing)
+- Kaggle Notebook (Music Genre Classification - FMA Small): [Tại đây](https://www.kaggle.com/code/jisy736386/music-genre-classification-spectrogram-fma-small)
+- Kaggle Notebook (Music Genre Classification - Spectrogram): [Tại đây](https://www.kaggle.com/code/jisy736386/music-genre-classification-spectrogram)
+
 ## Hướng dẫn cài đặt
 
 1. **Clone kho (Repository)** dự án xuống máy hoặc mở thư mục dự án lên.
@@ -68,3 +74,6 @@ python app.py
 - **Xử lý âm thanh**: Librosa
 - **Xử lý mảng & Vẽ biểu đồ**: NumPy, Matplotlib
 - **Frontend**: HTML5, CSS3, JavaScript
+
+## Giấy phép (License)
+Dự án này được cấp phép theo các điều khoản của Apache License 2.0. Xem file [LICENSE](./LICENSE) để biết thêm chi tiết.
