@@ -119,7 +119,7 @@ function createResultCard(result, index) {
         </div>
         <div class="image-toggle-buttons">
             <button class="toggle-btn" data-type="spectrogram" data-index="${index}">Xem Quang phổ</button>
-            <button class="toggle-btn" data-type="features" data-index="${index}">Xem 57 Đặc trưng</button>
+            <button class="toggle-btn" data-type="features" data-index="${index}">Xem Đặc trưng âm thanh</button>
         </div>
         <div id="image-container-${index}" class="image-container">
             </div>
