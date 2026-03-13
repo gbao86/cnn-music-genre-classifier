@@ -28,27 +28,27 @@ Mô hình được tối ưu hóa qua 2 giai đoạn (Warm-up và Fine-tuning) �
 ### 1. Hiệu suất mô hình (Accuracy & Loss)
 Đồ thị dưới đây cho thấy sự cải thiện vượt bậc về độ chính xác sau giai đoạn Warm-up tại epoch 50.
 
-![Accuracy and Loss](./images/Accuracy and Loss.png)
+![Accuracy and Loss](/images/Accuracy_and_Loss.png)
 
 ### 2. Báo cáo Phân loại (Classification Report)
 Mô hình đạt độ chính xác tổng thể **79%**. Thể loại *International* đạt độ chính xác cực cao (93%).
 
-![Classification Report](images/Classification Report.png)
+![Classification Report](images/Classification_Report.png)
 
 ### 3. Ma trận Nhầm lẫn (Confusion Matrix)
 Khả năng phân loại chính xác nhất nằm ở nhóm *Hip-Hop* (88%) và *Rock* (85%).
 
-![Confusion Matrix](images/Confusion Matrix.png)
+![Confusion Matrix](images/Confusion_Matrix.png)
 
 ### 4. Đường cong ROC (Multi-class ROC)
 Chỉ số AUC trung bình đạt **0.97**, cho thấy khả năng phân tách giữa các lớp cực kỳ mạnh mẽ.
 
-![ROC Curve](images/ROC Curve.png)
+![ROC Curve](images/ROC_Curve.png)
 
 ### 5. Phân tích Cụm lỗi (Hierarchical Clustering)
 Sử dụng Dendrogram để hiểu rõ các nhóm thể loại có đặc trưng gần giống nhau, giúp tinh chỉnh mô hình trong tương lai.
 
-![Hierarchical Clustering](images/Hierarchical Clustering.png)
+![Hierarchical Clustering](images/Hierarchical_Clustering.png)
 
 ---
 
