@@ -20,6 +20,38 @@ Bạn có thể xem video giới thiệu tại đây:
   - Tạo và hiển thị biểu đồ **chuỗi đặc trưng âm thanh (Audio Features)**.
 - **Các thể loại hỗ trợ**: Electronic (Điện tử), Experimental (Thể nghiệm), Folk (Dân gian), Hip-Hop, Instrumental (Không lời), International (Quốc tế), Pop, Rock.
 
+---
+
+## 📊 Kết quả Huấn luyện & Đánh giá
+Mô hình được tối ưu hóa qua 2 giai đoạn (Warm-up và Fine-tuning) để đạt hiệu suất tốt nhất.
+
+### 1. Hiệu suất mô hình (Accuracy & Loss)
+Đồ thị dưới đây cho thấy sự cải thiện vượt bậc về độ chính xác sau giai đoạn Warm-up tại epoch 50.
+
+![Accuracy and Loss](image_79ea63.png)
+
+### 2. Báo cáo Phân loại (Classification Report)
+Mô hình đạt độ chính xác tổng thể **79%**. Thể loại *International* đạt độ chính xác cực cao (93%).
+
+![Classification Report](image_79ea9e.png)
+
+### 3. Ma trận Nhầm lẫn (Confusion Matrix)
+Khả năng phân loại chính xác nhất nằm ở nhóm *Hip-Hop* (88%) và *Rock* (85%).
+
+![Confusion Matrix](image_79eabe.png)
+
+### 4. Đường cong ROC (Multi-class ROC)
+Chỉ số AUC trung bình đạt **0.97**, cho thấy khả năng phân tách giữa các lớp cực kỳ mạnh mẽ.
+
+![ROC Curve](image_79ea83.png)
+
+### 5. Phân tích Cụm lỗi (Hierarchical Clustering)
+Sử dụng Dendrogram để hiểu rõ các nhóm thể loại có đặc trưng gần giống nhau, giúp tinh chỉnh mô hình trong tương lai.
+
+![Hierarchical Clustering](image_79ea7d.png)
+
+---
+
 ## Cấu trúc dự án
 
 - `app.py`: Mã nguồn ứng dụng máy chủ Flask chính. Xử lý âm thanh, dự đoán từ mô hình và xuất biểu đồ.
