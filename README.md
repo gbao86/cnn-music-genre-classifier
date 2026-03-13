@@ -2,6 +2,16 @@
 
 Dự án này là một ứng dụng web giúp phân loại các tệp âm thanh thành 8 thể loại âm nhạc khác nhau, sử dụng Mạng nơ-ron tích chập 2 giai đoạn (2-Stage CNN) được xây dựng với TensorFlow/Keras và trích xuất lượng đặc trưng âm thanh thông qua thư viện `librosa`.
 
+---
+
+### 🎥 Video Demo
+
+Bạn có thể xem video giới thiệu tại đây:
+
+👉 [Xem Video Demo trên YouTube](https://youtu.be/uYD2JqV0xZI?si=WJXvkpLL5ICKQ9eT)
+
+---
+
 ## Các chức năng chính
 
 - **Dự đoán thể loại**: Tải lên một tệp âm thanh và nhận kết quả dự đoán thể loại cùng với độ tin cậy cho toàn bộ 8 danh mục.
@@ -9,6 +19,38 @@ Dự án này là một ứng dụng web giúp phân loại các tệp âm thanh
   - Tạo và hiển thị **Mel-Spectrogram** của âm thanh được tải lên.
   - Tạo và hiển thị biểu đồ **chuỗi đặc trưng âm thanh (Audio Features)**.
 - **Các thể loại hỗ trợ**: Electronic (Điện tử), Experimental (Thể nghiệm), Folk (Dân gian), Hip-Hop, Instrumental (Không lời), International (Quốc tế), Pop, Rock.
+
+---
+
+## 📊 Kết quả Huấn luyện & Đánh giá
+Mô hình được tối ưu hóa qua 2 giai đoạn (Warm-up và Fine-tuning) để đạt hiệu suất tốt nhất.
+
+### 1. Hiệu suất mô hình (Accuracy & Loss)
+Đồ thị dưới đây cho thấy sự cải thiện vượt bậc về độ chính xác sau giai đoạn Warm-up tại epoch 50.
+
+![Accuracy and Loss](images/Accuracy and Loss.png)
+
+### 2. Báo cáo Phân loại (Classification Report)
+Mô hình đạt độ chính xác tổng thể **79%**. Thể loại *International* đạt độ chính xác cực cao (93%).
+
+![Classification Report](images/Classification Report.png)
+
+### 3. Ma trận Nhầm lẫn (Confusion Matrix)
+Khả năng phân loại chính xác nhất nằm ở nhóm *Hip-Hop* (88%) và *Rock* (85%).
+
+![Confusion Matrix](images/Confusion Matrix.png)
+
+### 4. Đường cong ROC (Multi-class ROC)
+Chỉ số AUC trung bình đạt **0.97**, cho thấy khả năng phân tách giữa các lớp cực kỳ mạnh mẽ.
+
+![ROC Curve](images/ROC Curve.png)
+
+### 5. Phân tích Cụm lỗi (Hierarchical Clustering)
+Sử dụng Dendrogram để hiểu rõ các nhóm thể loại có đặc trưng gần giống nhau, giúp tinh chỉnh mô hình trong tương lai.
+
+![Hierarchical Clustering](images/Hierarchical Clustering.png)
+
+---
 
 ## Cấu trúc dự án
 
