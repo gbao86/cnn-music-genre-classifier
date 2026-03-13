@@ -28,7 +28,7 @@ Mô hình được tối ưu hóa qua 2 giai đoạn (Warm-up và Fine-tuning) �
 ### 1. Hiệu suất mô hình (Accuracy & Loss)
 Đồ thị dưới đây cho thấy sự cải thiện vượt bậc về độ chính xác sau giai đoạn Warm-up tại epoch 50.
 
-![Accuracy and Loss](images/Accuracy and Loss.png)
+![Accuracy and Loss](./images/Accuracy and Loss.png)
 
 ### 2. Báo cáo Phân loại (Classification Report)
 Mô hình đạt độ chính xác tổng thể **79%**. Thể loại *International* đạt độ chính xác cực cao (93%).
