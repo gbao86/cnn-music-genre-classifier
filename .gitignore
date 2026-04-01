@@ -5,9 +5,7 @@ __pycache__/
 *.exe
 *.keras
 *.mp4
-*.pkl
 *.mp3
 *.ipynb
 data/
-Mohinh/
 TH Python/
