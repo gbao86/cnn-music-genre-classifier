@@ -7,6 +7,7 @@ __pycache__/
 *.mp4
 *.pkl
 *.mp3
+*.ipynb
 data/
 Mohinh/
 TH Python/
