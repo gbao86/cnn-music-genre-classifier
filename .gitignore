@@ -3,7 +3,6 @@
 .vscode/
 __pycache__/
 *.exe
-*.keras
 *.mp4
 *.mp3
 *.ipynb
